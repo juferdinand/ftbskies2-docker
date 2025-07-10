@@ -14,9 +14,8 @@ RUN apt-get update && apt-get install -y curl && \
  adduser --uid 99 --gid 100 --home /data --disabled-password minecraft
 
 # Ensure launch.sh exists in the build context
-COPY launch.sh /launch.sh
-RUN chmod +x /launch.sh && \
-    chown minecraft:minecraft /launch.sh
+COPY launch.sh /data/launch.sh
+RUN chmod +x /launch.sh
 
 USER minecraft
 
