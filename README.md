@@ -37,7 +37,7 @@ As the end user, you are repsonsible for accepting the EULA from Mojang to run t
 These environment variables can be set at run time to override their defaults.
 
 * JVM_OPTS "-Xms4096m -Xmx6144m"
-* MOTD "FTB Skies Server Powered by Docker"
+* MOTD "FTB Skies 2 Server Powered by Docker"
 * LEVEL world
 
 ### Adding Minecraft Operators
