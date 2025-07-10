@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y curl && \
 
 # Ensure launch.sh exists in the build context
 COPY launch.sh /data/launch.sh
-RUN chmod +x /launch.sh
+RUN chmod +x data/launch.sh
 
 USER minecraft
 
