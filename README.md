@@ -59,6 +59,6 @@ This container is designed for [Unraid](https://unraid.net) so the user in the c
 If the install is incomplete for some reason.  Deleting the downloaded server file in /data will restart the install/upgrade process.
 
 ## Source
-Github: https://github.com/Goobaroo/docker-ftbskies
+Github: [https://github.com/Goobaroo/docker-ftbskies](https://github.com/Goobaroo/docker-ftbskies)
 
-Docker: https://hub.docker.com/repository/docker/goobaroo/ftbskies
+Docker: [https://hub.docker.com/repository/docker/acidrs/ftbskies2](https://hub.docker.com/repository/docker/acidrs/ftbskies2)
