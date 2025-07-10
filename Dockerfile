@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y curl && \
 
 # Ensure launch.sh exists in the build context
 COPY launch.sh /data/launch.sh
-RUN chmod +x data/launch.sh
+RUN chmod +x /data/launch.sh
 
 USER minecraft
 
@@ -24,7 +24,7 @@ WORKDIR /data
 
 EXPOSE 25565/tcp
 
-ENV MOTD="FTB Skies v1.3.1 Server Powered by Docker"
+ENV MOTD="FTB Skies 2 Server Powered by Docker"
 ENV LEVEL=world
 ENV JVM_OPTS="-Xms4096m -Xmx6144m"
 
