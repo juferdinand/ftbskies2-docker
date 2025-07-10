@@ -12,7 +12,7 @@ jobs:
     steps:
     - name: checkout
     - uses: actions/checkout@v4
-    - name: Build the image
+    - name: build image
       run: docker build . --file Dockerfile --tag acidrs/ftbskies2:latest
     - name: push image to docker hub
       run: 
