@@ -18,7 +18,7 @@
 
 This container is built to run on an [Unraid](https://unraid.net) server, outside of that your milliage will vary.
 
-The docker on first run will download the same version as tagged of `FTB Skies 2` and install it.  This can take a while as the Forge installer can take a bit to complete.  You can watch the logs and it will eventually finish.
+The docker on first run will download the same version as tagged of `FTB Skies` and install it.  This can take a while as the Forge installer can take a bit to complete.  You can watch the logs and it will eventually finish.
 
 After the first run it will simply start the server.
 
@@ -59,6 +59,6 @@ This container is designed for [Unraid](https://unraid.net) so the user in the c
 If the install is incomplete for some reason.  Deleting the downloaded server file in /data will restart the install/upgrade process.
 
 ## Source
-Github: https://github.com/acidrs03/ftbskies2-docker
+Github: https://github.com/Goobaroo/docker-ftbskies
 
 Docker: https://hub.docker.com/repository/docker/goobaroo/ftbskies
