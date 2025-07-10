@@ -15,6 +15,6 @@ jobs:
     - name: build image
       run: docker build . --file Dockerfile -t acidrs/ftbskies2:latest
     - name: push image to docker hub
-      run: 
+      run: |
         docker login -u acidrs -p ${{ secrets.DOCKER_HUB_TOKEN }}
         docker push acidrs/ftbskies2:latest
