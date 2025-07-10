@@ -13,9 +13,9 @@ LABEL homepage.widget.url=udp://FTBSkies:25565
 RUN apt-get update && apt-get install -y curl && \
  adduser --uid 99 --gid 100 --home /data --disabled-password minecraft
 
-# Ensure launch.sh exists in the build context and has LF line endings
+# Ensure launch.sh exists in the build context
 COPY launch.sh /launch.sh
-RUN dos2unix /launch.sh && chmod +x /launch.sh
+RUN /launch.sh && chmod +x /launch.sh
 
 USER minecraft
 
