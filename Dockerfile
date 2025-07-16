@@ -1,24 +1,23 @@
-# syntax=docker/dockerfile:1
-
-FROM openjdk:21-jdk-buster
+FROM eclipse-temurin:21-jdk-bookworm
 
 LABEL version="1.4.1"
-LABEL homepage.group=Minecraft
+LABEL homepage.group="Minecraft"
 LABEL homepage.name="FTB Skies 2"
 LABEL homepage.icon="https://cdn.feed-the-beast.com/blob/49/4951517d1bd2376e48d280427f95fd313c7aa778bddff582296651cfae7d7a9a.png"
-LABEL homepage.widget.type=minecraft
-LABEL homepage.widget.url=udp://FTBSkies:25565
+LABEL homepage.widget.type="minecraft"
+LABEL homepage.widget.url="udp://FTBSkies:25565"
 
-
+# Install dependencies and create user
 RUN apt-get update && apt-get install -y curl && \
- adduser --uid 99 --gid 100 --home /data --disabled-password minecraft
+    adduser --uid 99 --gid 100 --home /data --disabled-password minecraft
 
-# Ensure launch.sh exists in the build context
+# Copy and configure the launch script
 COPY launch.sh /launch.sh
-RUN chmod +x /launch.sh
+RUN chmod +x /launch.sh && \
+    chown minecraft:minecraft /launch.sh
 
+# Set the user and working directory
 USER minecraft
-
 VOLUME /data
 WORKDIR /data
 
