@@ -1,4 +1,5 @@
-FROM eclipse-temurin:21-jdk-bookworm
+FROM eclipse-temurin:21-jdk
+
 
 LABEL version="1.4.1"
 LABEL homepage.group="Minecraft"
