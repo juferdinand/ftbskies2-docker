@@ -9,9 +9,9 @@ LABEL homepage.icon="https://cdn.feed-the-beast.com/blob/49/4951517d1bd2376e48d2
 LABEL homepage.widget.type=minecraft
 LABEL homepage.widget.url=udp://FTBSkies:25565
 
-# Create group and user with UID/GID in the normal range
-RUN groupadd -g 1000 minecraft && \
-    useradd -u 1000 -g minecraft -d /data -m -s /bin/bash minecraft && \
+# Create minecraft group and user with UID/GID 99
+RUN groupadd -g 99 minecraft && \
+    useradd -u 99 -g minecraft -d /data -m -s /bin/bash minecraft && \
     apt-get update && apt-get install -y curl
 
 # Add launch script and set permissions
