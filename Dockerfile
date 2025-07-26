@@ -2,7 +2,7 @@
 
 FROM eclipse-temurin:21-jdk
 
-LABEL version="1.4.1"
+LABEL version="1.5.1"
 LABEL homepage.group=Minecraft
 LABEL homepage.name="FTB Skies 2"
 LABEL homepage.icon="https://cdn.feed-the-beast.com/blob/49/4951517d1bd2376e48d280427f95fd313c7aa778bddff582296651cfae7d7a9a.png"
